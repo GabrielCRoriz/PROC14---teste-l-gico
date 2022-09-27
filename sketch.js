@@ -35,8 +35,7 @@ function setup() {
 
 function draw() {
  background(0);
-  //Coloque um valor para a cena mover para a esquerda(positivo ou negativo?)
-    scene.velocityX = ?
+    scene.velocityX = -3
 
     if (scene.x < 0){
       scene.x = scene.width/2;
@@ -44,7 +43,7 @@ function draw() {
   
   
   //a flecha se movera para cima e para baixo qual 
-  bow.? = World.mouse?
+  bow.y = World.mouseY
   
   
   if (keyDown("space")) {
@@ -63,7 +62,7 @@ function draw() {
     break;
     case 3:pinkBalloon();
     break;
-    case 4://chame a função do balao verde);
+    case 4:greenBalloon();
     break;
     default:break;
   }}
