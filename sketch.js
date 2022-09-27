@@ -20,12 +20,12 @@ function preload(){
 function setup() {
   createCanvas(400, 400);
   
-  //crie o fundo
+ 
   scene = createSprite(0,0,400,400);
   scene.addImage(backgroundImage);
   scene.scale = 2.5
   
-  // criando arco para a flecha
+
   bow = createSprite(380,220,20,50);
   bow.addImage(bowImage); 
   bow.scale = 1;
@@ -35,23 +35,24 @@ function setup() {
 
 function draw() {
  background(0);
-  // chão em movimento
-    scene.velocityX = -3 
+  //Coloque um valor para a cena mover para a esquerda(positivo ou negativo?)
+    scene.velocityX = ?
 
     if (scene.x < 0){
       scene.x = scene.width/2;
     }
   
-  //arco em movimento
-  bow.y = World.mouseY
   
-   // soltar arco quando a tecla espaço for pressionada
+  //a flecha se movera para cima e para baixo qual 
+  bow.? = World.mouse?
+  
+  
   if (keyDown("space")) {
     createArrow();
     
   }
    
-  //criando inimigos continuamente
+  
   var select_balloon = Math.round(random(1,4));
   
   if (World.frameCount % 100 == 0) {
@@ -62,7 +63,7 @@ function draw() {
     break;
     case 3:pinkBalloon();
     break;
-    case 4:greenBalloon();
+    case 4://chame a função do balao verde);
     break;
     default:break;
   }}
@@ -71,7 +72,7 @@ function draw() {
 }
 
 
-// Criar flechas para o arco
+
  function createArrow() {
   var arrow= createSprite(100, 100, 60, 10);
   arrow.addImage(arrowImage);
